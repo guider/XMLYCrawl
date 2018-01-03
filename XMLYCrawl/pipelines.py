@@ -24,7 +24,8 @@ class XmlycrawlPipeline(FilesPipeline):
         并对各个图片URL返回一个Request:
         '''
         for file in item['file_urls']:
-            print('file  >>>>   ' + file)
+            if file is None:
+                continue
             yield scrapy.Request(file)
 
 

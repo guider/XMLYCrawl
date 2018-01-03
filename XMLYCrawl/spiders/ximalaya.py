@@ -22,11 +22,13 @@ class XimalayaSpider(scrapy.Spider):
     name = "ximalaya"
     allowed_domains = ["ximalaya.com"]
     start_urls = [
-        'http://www.ximalaya.com/4228109/album/277579/',
+        'http://www.ximalaya.com/4228109/album/277579/?page=1',
         'http://www.ximalaya.com/4228109/album/277579/?page=2',
         'http://www.ximalaya.com/4228109/album/277579/?page=3',
         'http://www.ximalaya.com/4228109/album/277579/?page=4',
-        'http://www.ximalaya.com/4228109/album/277579/?page=5'
+        'http://www.ximalaya.com/4228109/album/277579/?page=5',
+        'http://www.ximalaya.com/4228109/album/9452381?page=1',
+        'http://www.ximalaya.com/4228109/album/9452381?page=2'
     ]
 
     def parse(self, response):
